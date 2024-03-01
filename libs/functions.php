@@ -1,5 +1,20 @@
 <?php
 
+
+
+
+function getCategories(){
+    include "ayar.php";
+    $quary="SELECT* from kategoriler";
+    $sonuc=mysqli_query($baglanti,$quary);
+    mysqli_close($baglanti);
+    return $sonuc;
+}
+
+
+
+
+
 function getDb() {
     $myfile = fopen("db.json","r");
     $size = filesize("db.json");
